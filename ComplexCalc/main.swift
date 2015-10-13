@@ -108,6 +108,10 @@ func subtractTuples(first : (Int,Int), second : (Int,Int)) -> (Int,Int) {
 print(addTuples((1,1), second: (2,3)));
 print(subtractTuples((1,1), second: (2,3)));
 
+func addDictionaries(first : Dictionary<String,Int>, second : Dictionary<String,Int>) -> Dictionary<String,Int> {
+    return Dictionary<String,Int>();
+}
+
 
 
 
