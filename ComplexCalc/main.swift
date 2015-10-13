@@ -53,3 +53,28 @@ func multiplyArrayContents(values : [Int]) -> Int {
 print(addArrayContents([1,2,3,4,5]));
 print(multiplyArrayContents([1,2,3,4,5]));
 
+func countArrayContents(values : [Int]) -> Int {
+    return values.count;
+}
+
+func averageArrayContents(values : [Int]) -> Int {
+    let totalValue = addArrayContents(values);
+    return totalValue / values.count;
+}
+
+print(countArrayContents([1,2,3,4,5]));
+print(averageArrayContents([1,2,3,4,5]));
+
+func genericArrayOperation(arrayOperation : ([Int]) -> Int, values : [Int]) -> Int {
+    return arrayOperation(values);
+}
+
+print(genericArrayOperation(averageArrayContents, values: [1,2,3,4,5]));
+
+
+
+
+
+
+
+
