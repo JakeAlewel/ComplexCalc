@@ -8,6 +8,12 @@
 
 import Foundation
 
+/*
+
+Basic Calculator
+
+*/
+
 func add(first : Int, second : Int) -> Int {
     return first + second;
 }
@@ -33,6 +39,12 @@ print(subtract(5, second: 5));
 print(multiply(5, second: 5));
 print(divide(5, second: 5));
 print(genericMathOperation(subtract, first: 5, second: 5));
+
+/*
+
+Array Calculator
+
+*/
 
 func addArrayContents(values : [Int]) -> Int {
     var total : Int = 0;
@@ -71,8 +83,30 @@ func genericArrayOperation(arrayOperation : ([Int]) -> Int, values : [Int]) -> I
 
 print(genericArrayOperation(averageArrayContents, values: [1,2,3,4,5]));
 
+/*
 
+Tuple Calculator
 
+*/
+
+func addTuples(first : (Int,Int), second : (Int,Int)) -> (Int,Int) {
+    var result : (Int,Int) = first;
+    result.0 += second.0;
+    result.1 += second.1;
+    
+    return result;
+}
+
+func subtractTuples(first : (Int,Int), second : (Int,Int)) -> (Int,Int) {
+    var result : (Int,Int) = first;
+    result.0 -= second.0;
+    result.1 -= second.1;
+    
+    return result;
+}
+
+print(addTuples((1,1), second: (2,3)));
+print(subtractTuples((1,1), second: (2,3)));
 
 
 
