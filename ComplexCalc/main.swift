@@ -114,12 +114,40 @@ Dictionary Calculator
 
 */
 
-func addDictionaries(first : Dictionary<String,Int>, second : Dictionary<String,Int>) -> Dictionary<String,Int> {
-    return Dictionary<String,Int>();
+func addDictionaries(first : Dictionary<String,Int>, second : Dictionary<String,Int>) -> Dictionary<String,Int>? {
+    var returnValue = Dictionary<String,Int>();
+    
+    if (first["y"] != nil && second["y"] != nil) {
+        returnValue["y"] = first["y"]! + second["y"]!;
+    } else {
+        return nil;
+    }
+    
+    if (first["x"] != nil && second["x"] != nil) {
+        returnValue["x"] = first["x"]! + second["x"]!;
+    } else {
+        return nil;
+    }
+    
+    return returnValue;
 }
 
-func subtractDictionaries(first : Dictionary<String,Int>, second : Dictionary<String,Int>) -> Dictionary<String,Int> {
-    return Dictionary<String,Int>();
+func subtractDictionaries(first : Dictionary<String,Int>, second : Dictionary<String,Int>) -> Dictionary<String,Int>? {
+    var returnValue = Dictionary<String,Int>();
+    
+    if (first["y"] != nil && second["y"] != nil) {
+        returnValue["y"] = first["y"]! - second["y"]!;
+    } else {
+        return nil;
+    }
+    
+    if (first["x"] != nil && second["x"] != nil) {
+        returnValue["x"] = first["x"]! - second["x"]!;
+    } else {
+        return nil;
+    }
+    
+    return returnValue;
 }
 
 let dict1 = [
